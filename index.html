@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login Page</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,29 +14,78 @@
     <div class="container">
       <div class="form-box login">
         <form action="">
-            <h1>Login</h1>
+            <img src="cropped_circle.png" alt="Blood Donors Logo" class="logo">
+            <p style="font-weight: bold; color: #A6191B;">A Moment Can Change a Life</p>
             <div class="input-box">
-                <input type="text" placeholder="username" required>
+                <input type="text" placeholder="Username" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="password" required>
+                <input type="password" placeholder="Password" required>
                 <i class='bx bxs-lock-open-alt'></i>
             </div>
             <div class="forgot-link">
-                <a href="#">forgot password?</a>
+                <a href="#" style="display: inline-block; margin-top: 10px; text-decoration: underline;">forgot password?</a>
             </div>
             <button type="submit" class="btn">Login</button>
             <p> or login with </p>
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-google' style='color:#ba0c0c'  ></i></a>
-                <a href="#"><i class='bx bxl-facebook-circle' style='color:#1066f4'  ></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt' style='color:#f410a7'  ></i></a>
+                <a href="#"><i class='bx bxl-google' style='color:#DB4437'  ></i></a>
+                <a href="#"><i class='bx bxl-facebook-circle' style='color:#4267B2'  ></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt' style='color:#E1306C'  ></i></a>
+            </div> 
+            
+            <div class="footer-links">
+                <p>Privacy | Team & Condition | License | About Us</p>
             </div>
-                
         </form> 
       </div>
+
+      <div class="form-box register">
+        <form action="">
+            <img src="cropped_circle.png" alt="Blood Donors Logo" class="logo">
+            <p style="font-weight: bold; color: #A6191B;">A Moment Can Change a Life</p>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class='bx bxs-lock-open-alt'></i>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <p> or register with </p>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-google' style='color:#DB4437'  ></i></a>
+                <a href="#"><i class='bx bxl-facebook-circle' style='color:#4267B2'  ></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt' style='color:#E1306C'  ></i></a>
+            </div>
+
+            <div class="footer-links">
+                <p>Privacy | Team & Condition | License | About Us</p>
+            </div>
+            
+        </form> 
+      </div>
+
+      <div class="toggle-box">
+        <div class="toggle-panel toggle-left">
+            <h1>Blood Donors</h1>
+            <p>Connecting Lives Through Blood Donation</p>
+            <button class="btn register-btn">Register</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+            <h1>Blood Donors</h1>
+            <p>Connecting Lives Through Blood Donation</p>
+            <button class="btn login-btn">Login</button>
+        </div>
+      </div>
     </div>
-   
+    
+    <script src="script.js"></script>
 </body>
 </html>
