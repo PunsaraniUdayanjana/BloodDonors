@@ -21,7 +21,7 @@ body{
 /* Main container for the login and registration forms */
 .container {
     position: relative;
-    width: 851px;
+    width: 850px;
     height: 550px;
     background: #fff;
     border-radius: 30px;
