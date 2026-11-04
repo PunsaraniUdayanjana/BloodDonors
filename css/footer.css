@@ -1,0 +1,99 @@
+
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.footer {
+   background: #000d07;
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+}
+
+.footer  {
+    padding: 5rem 8% 0;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer .container .box h2 {
+    font-size: 2.6rem;
+    margin: 6rem;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.footer .container .box h3 {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.footer .container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: #eee;
+}
+
+.footer .container .box a i {
+    padding-right: 0.5rem;
+    color: #0ea28a;
+    text-align: left;
+}
+
+.footer .container .box a:hover i {
+    padding-right: 1.5rem;
+    color: #fff;
+}
+
+.footer .container .box a:hover {
+    text-decoration: wavy;
+}
+
+.icons {
+    font-size: 2.5rem;
+    color: #0ea28a;
+    margin-top: 2rem;
+    display: flex;
+    gap: 15px;
+}
+
+
+.face,
+.insta {
+    padding-left: 20px;
+}
+
+.goog:hover,
+.face:hover,
+.insta:hover {
+    color: #fff;
+}
+
+
+.footer .lastline {
+    text-align: center;
+    border-top: 0.1rem solid #222;
+    color: #c3c2c2;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+}

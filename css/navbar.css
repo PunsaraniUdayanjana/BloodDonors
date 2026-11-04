@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 0px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+   width: 35px;
+   height: 35px;
+   object-fit: contain;
+}
+
+.brand-name {
+    color:#8b181b ;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Georgia', serif
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35%;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 650;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ce1d23;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    color: #333333;
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.icon-btn:hover {
+    color: #ce1d23;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #8b181b;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 758px) {
+    .navbar{
+        flex-wrap: wrap;
+        gap: 15px;
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        order: 3;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}

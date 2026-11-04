@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="../css/home-page.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close_small" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+    <section class="hero-section">
+        <div class="hero-container">
+
+            <div class="hero-content">
+                <h1>Hello, Welcome!</h1>
+                <h2 class="brand-title">Blood Donors</h2>
+                <p class="tagline"> Connecting Lives Through Blood Donation </p>
+                <p class="sub-tagline"> A Moment Can Change a Life </p>
+
+
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-red" onclick="window.location.href='find-donor.html'">Find a Donor</a>
+                    <a href="#" class="btn btn-teal">Blood Donor</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="../images/home_image.jpg" alt="Blood Donation Illustration">
+            </div>
+
+        </div>
+    </section>
+    
+    
+    <section class="about-section">
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="../images/about_image.png" alt="About of Blood Donation ">
+            </div>
+
+            <div class="about-content">
+                <h1>Connecting Lives Through Blood Donation</h1>
+                <h2><span class="animated-word">Every Donation Saves Lives</span></h2>
+                <p class="disription"> 
+                    Welcome to Blood Donors, a platform dedicated to connecting blood donors with people in need. Our system helps patients and their families find suitable blood donors based on blood group and location, making it easier to reach potential donors when every moment matters.
+                    <br><br> From finding available donors to submitting emergency blood requests, our goal is to make the blood donation process more accessible, convenient and efficient. We believe that every blood donation can make a difference, and together, we can help save lives by connecting those who are willing to donate with those who urgently need blood.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="card-section">
+        <div class="card-container swiper">
+            <div class="card-wrapper">
+
+                 <div class="card-heading">
+                    <p class="main-badge"> Blood Groups </p>
+                    <h1>Know. Match. Save Lives.</h1>
+                    <p>Explore our services and learn how we help save lives through blood donation.</p>
+                 </div>
+                
+
+                <ul class="card-list swiper-wrapper">
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/A+.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> A+ Blood Group</p>
+                            <h2 class="card-title">Can donate red blood cells to A+ and AB+ individuals and is among the most common blood types worldwide.</h2>
+                            <button class="card-button" data-modal="bloodType1">Learn More</button>
+                        </div>
+                    </li>
+
+                    
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/A-.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> A- Blood Group</p>
+                            <h2 class="card-title">Helps A and AB recipients with either Rh type by providing compatible red blood cells for transfusions when needed.</h2>
+                            <button class="card-button" data-modal="bloodType1">Learn More</button>
+                        </div>
+                    </li>
+
+
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/B+.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> B+ Blood Group</p>
+                            <h2 class="card-title">Can donate red blood cells to B+ and AB+ individuals, helping patients with these compatible blood types during transfusions.</h2>
+                            <button class="card-button">Learn More</button>
+                        </div>
+                    </li>
+
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/B-.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> B- Blood Group</p>
+                            <h2 class="card-title">Can help B and AB recipients with either Rh type by providing compatible red blood cells for patient transfusions.</h2>
+                            <button class="card-button">Learn More</button>
+                        </div>
+                    </li>
+
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/AB+.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> AB+ Blood Group</p>
+                            <h2 class="card-title">Known as the universal red blood cell recipient, it can receive red blood cells from all eight blood types.</h2>
+                            <button class="card-button">Learn More</button>
+                        </div>
+                    </li>
+
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/AB-.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> AB- Blood Group</p>
+                            <h2 class="card-title">A rare blood type that can donate red blood cells to both AB− and AB+ individuals, supporting compatible transfusions.</h2>
+                            <button class="card-button">Learn More</button>
+                        </div>
+                    </li>
+
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/O+.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> O+ Blood Group</p>
+                            <h2 class="card-title">One of the most common blood types, it can donate red blood cells to all Rh-positive blood groups and patients.</h2>
+                            <button class="card-button">Learn More</button>
+                        </div>
+                    </li>
+
+
+                    <li class="card-item swiper-slide">
+                        <div class="card-link">
+                            <img src="../images/blood_types/O-.png" alt="Card-Image" class="card-image">
+                            <p class="badge"> O- Blood Group</p>
+                            <h2 class="card-title">It is the universal red blood cell donor, especially important during emergencies when a patient's blood type remains unknown.</h2>
+                            <button class="card-button">Learn More</button>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+    </section> 
+
+   
+        <div id="footer"></div>
+   
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/home-page.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
