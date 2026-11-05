@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Welcome , donar </title>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/donar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+   
+   
+</head>
+<body>
+
+
+    <div id="navbar"></div>
+    
+
+    <div class="container1">
+        <div class="headline">
+             <h1>CONNECT WITH WILLING DONORS AND HELP SAVE LIVES WHEN BLOOD IS NEEDED</h1>
+        </div>
+        <div class="forum">
+            <h1 class="welcome">Welcome , Donar</h1>
+            <form name="Donor Registration Form" class="info "id="donorForm">
+                <li><input type="text" placeholder="Name" class="name"></li>
+                <li><input type="number" placeholder="Age" class="age"></li>
+                <li>
+                <select name="Blood Group" id="group" class="group">
+                    <option value="" disabled selected>Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                </li>
+                <li><input type="number" placeholder="Weight " class="weight"></li>
+                <li><input type="text" placeholder="National Identity Card Number" class="nic"></li>
+                <li>
+                    <input type="text"
+                    placeholder="Last Donated Date"
+                    onfocus="(this.type='date')"
+                    onblur="if(!this.value) this.type='text'"
+                    class="date">
+                </li>
+                <li><input type="text" placeholder="Town , District" class="town"></li>
+                <li><textarea placeholder="Chronic illnesses / Medications" class="illnesses" rows="3"></textarea></li>
+            
+                <div class="but-submit">
+                <input type="submit" class="submit1">
+            </div>
+                
+            
+            
+            </form>
+
+            
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    <script src="../js/footer.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/donar.js"></script>
+    
+</body>
+</html>

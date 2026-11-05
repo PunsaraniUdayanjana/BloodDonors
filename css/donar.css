@@ -1,0 +1,381 @@
+body{
+background-color: rgb(209, 208, 208);
+background-image: url("../images/Background.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+min-height: 100vh;
+margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    
+}
+
+
+
+/*headline*/
+
+
+.headline{
+    color: white;
+   padding-left: 35px;
+    flex: 0 0 38%;
+    min-width: 0;
+    
+
+    /*width: 4%;*/
+    
+}
+
+.headline {
+    margin-top: -200px;
+}
+
+.headline h1 {
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 1.4;
+    
+}
+
+
+/*forum*/
+.forum{
+    flex: 0 0 40%;
+    min-width: 0;
+    width: 35%;
+    border: 2px solid rgb(130, 15, 15);
+    border-radius: 25px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-right: 60px;
+    margin-top: 40px;
+    box-sizing: border-box; 
+    margin-right: 100px; 
+    
+}
+
+.welcome{
+    color: #b60615;
+    font-weight: bold;
+    text-align: center;
+     font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+
+/*form fields*/
+
+.info{
+    font-size: 30px;
+    padding-left: 5px;
+    
+    
+}
+
+.info li{
+    list-style: none;
+    margin-bottom: 15px;
+    
+     
+}
+
+
+.info input:not(.submit1){
+    width: 100%;
+    box-sizing: border-box;
+    border-color: rgb(229, 133, 133);
+    border-radius: 25px;
+    padding: 10px;
+    background-color: white;
+    font-size: 16px;
+    color: rgb(72, 71, 71);
+}
+
+
+.info input::placeholder,
+.info textarea::placeholder {
+    color: rgb(72, 71, 71);
+    font-size: 16px;
+
+}
+.info input:not(.submit1):focus,
+.info textarea:focus,
+.info select:focus {
+    outline: none;
+    border: 2px solid rgb(130, 15, 15);
+}
+
+/*blood group*/
+
+.group{
+    
+
+    background-image: url("../images/blood.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+
+
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(130, 15, 15);
+    border-radius: 25px;
+    padding: 10px 10px 10px 42px;
+    font-size: 16px;
+    color: rgb(72, 71, 71);
+    cursor: pointer;
+    background-color: white;
+}
+
+
+
+.group.selected {
+    background-image: none;
+}
+
+/*Test Area*/
+
+.illnesses{
+margin-top: 8px;
+  width: 100%;
+  border: 2px solid rgb(130, 15, 15);
+  border-radius: 20px;
+  height: 60px;
+  box-sizing: border-box;
+  resize: vertical;
+
+
+}
+
+.illnesses {
+    background-image: url("../images/med.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+    font-size: 16px;
+    font-family: inherit;
+   
+}
+
+.illnesses:not(:placeholder-shown) {
+    background-image: none;
+}
+
+
+/*input icon spacing*/
+
+.info input:not(.submit1),
+.info textarea {
+    padding-left: 42px;
+    
+}
+
+/* test after typing*/
+
+.forum input:not(.submit1):not(:placeholder-shown),
+.forum textarea:not(:placeholder-shown) {
+    font-size: 17px;
+}
+
+
+/*submit button*/
+.submit1{
+    color: white;
+    background-color: #024927;
+    border-color:  rgb(17, 143, 17);
+    border-radius: 18px;
+    width: 190px;
+    height: 50px;
+    box-shadow: 10px solid white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+    
+}
+
+.but-submit {
+    text-align: center;
+    margin-bottom: 22px;
+    
+}
+
+.submit1:hover {
+    background-color: rgb(61, 189, 61);
+}
+
+
+/*forum images*/
+
+.name {
+    background-image: url("../images/name.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.name:not(:placeholder-shown) {
+    background-image: none;
+}
+
+
+.age {
+    background-image: url("../images/age.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.age:not(:placeholder-shown) {
+    background-image: none;
+}
+
+
+
+
+.weight {
+    background-image: url("../images/weight.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.weight:not(:placeholder-shown) {
+    background-image: none;
+}
+
+.nic {
+    background-image: url("../images/nic.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.nic:not(:placeholder-shown) {
+    background-image: none;
+}
+
+
+.date{
+    background-image: url("../images/date.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.date:not(:placeholder-shown) {
+    background-image: none;
+}
+
+
+.town { background-image: url("../images/location.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.town:not(:placeholder-shown) {
+    background-image: none;
+}
+
+
+
+/* Restore borders of donor input fields */
+
+.forum .info input.name,
+.forum .info input.age,
+.forum .info input.weight,
+.forum .info input.nic,
+.forum .info input.date,
+.forum .info input.town {
+    
+    border: 2px solid rgb(130, 15, 15) !important;
+    background-color: white;
+    border-radius: 25px;
+    outline: none;
+}
+
+
+
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .headline {
+        flex: none;
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .headline h1 {
+        font-size: 23px;
+    }
+
+    .forum {
+        flex: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .headline h1 {
+        font-size: 19px;
+    }
+
+    .forum {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .welcome {
+        font-size: 22px;
+    }
+
+    .submit1 {
+        width: 160px;
+    }
+}
+
+
+
