@@ -18,15 +18,49 @@
         </button>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Donor</a></li>
+            <li><a href="home-page.html" class="active">Home</a></li>
+            <li><a href="donar.html">Donor</a></li>
             <li><a href="#">Emergency</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
         <div class="nav-icons">
-            <a href="#" class="icon-btn"><i class="fa-solid fa-bell"></i></a>
+
+              <!-- Notification icon -->
+            <div class="notification-container">
+
+                <button class="icon-btn" id="notificationButton"
+                        aria-label="Notifications" aria-expanded="false">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="notification-count">2</span>
+                </button>
+
+                <!-- Notification dropdown -->
+                <div class="notification-box" id="notificationBox">
+
+                    <h3>Notifications</h3>
+
+                    <a href="chat.html" class="notification-item">
+                        <i class="fa-solid fa-comment"></i>
+                        <div>
+                            <strong>New Message</strong>
+                            <p>You received a new message.</p>
+                        </div>
+                    </a>
+
+                    <a href="chat.html" class="notification-item">
+                        <i class="fa-solid fa-comment"></i>
+                        <div>
+                            <strong>New Message</strong>
+                            <p>You have an unread message.</p>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+            <!--notification icon-->
             <a href="#" class="icon-btn"><i class="fa-solid fa-circle-user"></i></a>
         </div>
 

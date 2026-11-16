@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             navbarContainer.innerHTML = await response.text();
 
+            //Mobile menu
             const menuToggle = document.getElementById("menu-toggle");
             const navLinks = document.getElementById("nav-links");
 
@@ -30,6 +31,35 @@ document.addEventListener("DOMContentLoaded", async () => {
                         ? '<i class="fa-solid fa-xmark"></i>'
                         : '<i class="fa-solid fa-bars"></i>';
                 });
+            }
+
+             // Notification dropdown
+            const notificationButton = document.getElementById("notificationButton");
+            const notificationBox = document.getElementById("notificationBox");
+
+            if (notificationButton && notificationBox) {
+
+                notificationButton.addEventListener("click", () => {
+
+                    const isOpen = notificationBox.classList.toggle("show");
+
+                    notificationButton.setAttribute("aria-expanded", isOpen);
+
+                });
+
+                // Close notification box when clicking outside
+                document.addEventListener("click", (event) => {
+
+                    if (!notificationButton.contains(event.target) &&
+                        !notificationBox.contains(event.target)) {
+
+                        notificationBox.classList.remove("show");
+                        notificationButton.setAttribute("aria-expanded", "false");
+
+                    }
+
+                });
+
             }
 
         } catch (error) {
