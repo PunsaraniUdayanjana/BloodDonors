@@ -4,78 +4,132 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const navbarContainer = document.getElementById("navbar");
 
-    if (navbarContainer) {
-        try {
-            const response = await fetch("../components/navbar.html");
+    if (!navbarContainer) return;
 
-            if (!response.ok) {
-                throw new Error("Failed to load navbar: " + response.status);
-            }
+    try {
+        const response = await fetch("../components/navbar.html");
 
-            navbarContainer.innerHTML = await response.text();
+        if (!response.ok) {
+            throw new Error("Failed to load navbar: " + response.status);
+        }
 
-            // Mobile Hamburger Menu
-            const menuToggle = document.getElementById("menu-toggle");
-            const navLinks = document.getElementById("nav-links");
+        navbarContainer.innerHTML = await response.text();
 
-            if (menuToggle && navLinks) {
-                menuToggle.addEventListener("click", () => {
-                    const isOpen = navLinks.classList.toggle("show");
+        // Mobile Hamburger Menu
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
 
-                    menuToggle.setAttribute("aria-expanded", isOpen);
-                    menuToggle.innerHTML = isOpen
-                        ? '<i class="fa-solid fa-xmark"></i>'
-                        : '<i class="fa-solid fa-bars"></i>';
-                });
-            }
+        if (menuToggle && navLinks) {
 
-            // Donor Dropdown
-            const donorDropdown = document.querySelector(".dropdown");
-            const dropdownToggle = document.querySelector(".dropdown-toggle");
+            menuToggle.addEventListener("click", () => {
 
-            if (donorDropdown && dropdownToggle) {
-                dropdownToggle.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    donorDropdown.classList.toggle("open");
-                });
-            }
+                const isOpen = navLinks.classList.toggle("show");
 
-            // Profile Dropdown
-            const profileDropdown = document.querySelector(".profile-dropdown");
-            const profileToggle = document.getElementById("profileToggle");
+                menuToggle.setAttribute("aria-expanded", isOpen);
 
-            if (profileDropdown && profileToggle) {
+                menuToggle.setAttribute(
+                    "aria-label",
+                    isOpen ? "Close navigation menu" : "Open navigation menu"
+                );
 
-                profileToggle.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    event.stopPropagation();
+                menuToggle.innerHTML = isOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
 
-                    const isOpen = profileDropdown.classList.toggle("open");
+            });
+        }
 
-                    profileToggle.setAttribute("aria-expanded", isOpen);
-                });
+        // Donor Dropdown
+        const donorDropdown = document.querySelector(".dropdown");
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
 
-            } else {
-                console.error("Profile dropdown elements not found!");
-            }
+        if (donorDropdown && dropdownToggle) {
 
-            // Close dropdowns when clicking outside
-            document.addEventListener("click", (event) => {
+            dropdownToggle.addEventListener("click", (event) => {
 
-                if (donorDropdown && !donorDropdown.contains(event.target)) {
-                    donorDropdown.classList.remove("open");
-                }
+                event.preventDefault();
+                event.stopPropagation();
 
-                if (profileDropdown && !profileDropdown.contains(event.target)) {
-                    profileDropdown.classList.remove("open");
-                    profileToggle?.setAttribute("aria-expanded", "false");
-                }
+                donorDropdown.classList.toggle("open");
+
+            });
+        }
+
+        // Profile Dropdown
+        const profileDropdown = document.querySelector(".profile-dropdown");
+        const profileToggle = document.getElementById("profileToggle");
+
+        if (profileDropdown && profileToggle) {
+
+            profileToggle.addEventListener("click", (event) => {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                const isOpen = profileDropdown.classList.toggle("open");
+
+                profileToggle.setAttribute("aria-expanded", isOpen);
 
             });
 
-        } catch (error) {
-            console.error("Navbar loading error:", error);
         }
+
+        // Notification Dropdown
+        const notificationButton = document.getElementById("notificationButton");
+        const notificationBox = document.getElementById("notificationBox");
+
+        if (notificationButton && notificationBox) {
+
+            notificationButton.addEventListener("click", (event) => {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                const isOpen = notificationBox.classList.toggle("show");
+
+                notificationButton.setAttribute("aria-expanded", isOpen);
+
+            });
+
+        }
+
+        // Close Dropdowns When Clicking Outside
+        document.addEventListener("click", (event) => {
+
+            // Donor Dropdown
+            if (donorDropdown && !donorDropdown.contains(event.target)) {
+                donorDropdown.classList.remove("open");
+            }
+
+            // Profile Dropdown
+            if (profileDropdown && !profileDropdown.contains(event.target)) {
+
+                profileDropdown.classList.remove("open");
+
+                profileToggle?.setAttribute("aria-expanded", "false");
+
+            }
+
+            // Notification Dropdown
+            if (
+                notificationButton &&
+                notificationBox &&
+                !notificationButton.contains(event.target) &&
+                !notificationBox.contains(event.target)
+            ) {
+
+                notificationBox.classList.remove("show");
+
+                notificationButton.setAttribute("aria-expanded", "false");
+
+            }
+
+        });
+
+    } catch (error) {
+
+        console.error("Navbar loading error:", error);
+
     }
+
 });

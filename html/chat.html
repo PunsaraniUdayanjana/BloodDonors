@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donors - Chat </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/chat.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <!--main chat section -->
+<main class="chat-container">
+     <div class="chat-box">
+
+          <!-- Conversation List -->
+             <section class="chat-list">
+
+                <div class="chat-list-header">
+                    <h1>Messages</h1>
+                    <span>Private conversations</span>
+                </div>
+
+                    <!-- Search -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text"
+                           id="searchChat"
+                           placeholder="Search conversations">
+                </div>
+
+                 <!-- Conversation 1 -->
+                <div class="conversation active"
+                     data-name="Kasun Perera"
+                     data-blood="O+">
+
+                    <div class="user-avatar">K</div>
+
+                    <div class="conversation-info">
+                        <h3>Kasun Perera</h3>
+                        <p>Thank you for contacting me.</p>
+                    </div>
+
+                    <span class="message-time">10:30 AM</span>
+                </div>
+
+                <!-- Conversation 2 -->
+                <div class="conversation"
+                     data-name="Nimal Silva"
+                     data-blood="A+">
+
+                    <div class="user-avatar">N</div>
+
+                    <div class="conversation-info">
+                        <h3>Nimal Silva</h3>
+                        <p>I'm available to donate.</p>
+                    </div>
+
+                    <span class="message-time">Yesterday</span>
+                </div>
+
+                <!-- Conversation 3 -->
+                <div class="conversation"
+                     data-name="Amal Fernando"
+                     data-blood="B+">
+
+                    <div class="user-avatar">A</div>
+
+                    <div class="conversation-info">
+                        <h3>Amal Fernando</h3>
+                        <p>Can you share the location?</p>
+                    </div>
+
+                    <span class="message-time">Yesterday</span>
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDE: Chat Window -->
+            <section class="chat-window">
+
+                <!-- Chat Header -->
+                <div class="chat-header">
+
+                    <a href="available-donor.html" class="back-button" title="Back to Available Donors">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+
+                    <div class="user-avatar">K</div>
+
+                    <div class="chat-user-info">
+                        <h3 id="chatUserName">Kasun Perera</h3>
+                        <p id="chatBloodGroup">Blood Group: O+</p>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="settings-container">
+
+                        <button class="settings-button"
+                                id="settingsButton"
+                                title="Chat settings">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                        <div class="settings-menu" id="settingsMenu">
+
+                            <button id="reportButton">
+                                <i class="fa-solid fa-flag"></i>
+                                Report
+                            </button>
+
+                            <button id="blockButton">
+                                <i class="fa-solid fa-ban"></i>
+                                Block
+                            </button>
+
+                            <hr>
+
+                            <button id="themeButton">
+                                <i class="fa-solid fa-moon"></i>
+                                Dark mode
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Message Area -->
+                <div class="message-area" id="messageArea">
+
+                    <div class="date-divider">
+                        Today
+                    </div>
+
+                    <div class="message received">
+                        <p>Hello! How can I help you?</p>
+                        <span>10:20 AM</span>
+                    </div>
+
+                    <div class="message sent">
+                        <p>Hello Kasun. I need to know whether you are available to donate blood.</p>
+                        <span>10:25 AM</span>
+                    </div>
+
+                    <div class="message received">
+                        <p>Yes, I'm available to donate.</p>
+                        <span>10:30 AM</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Message Input -->
+                <form class="message-form" id="messageForm">
+
+                    <input type="text"
+                           id="messageInput"
+                           placeholder="Type your message..."
+                           autocomplete="off">
+
+                    <button type="submit" title="Send message">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+     </div>
+
+    
+    </main>
+   
+    <script src="../js/chat.js"></script>
+</body>
+</html>

@@ -6,68 +6,124 @@
     <title>Navigation</title>
 </head>
 <body>
-    <nav class="navbar">
 
-        <div class="logo-container">
-            <img src="../images/cropped_circle.png" alt="Logo" class="logo-img">
-            <span class="brand-name">Blood Donors</span>
-        </div>   
-        
-        <button class="menu-toggle" id="menu-toggle" aria-label="open navigation menu" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+    
+<nav class="navbar">
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="../html/home-page.html" class="active">Home</a></li>
-            <li class="dropdown">
-                <a href="" class="dropdown-toggle">Donor<i class="fa-solid fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="../html/donar.html">Donor Registration</a>
-                    </li>
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="../images/cropped_circle.png" alt="Logo" class="logo-img">
+        <span class="brand-name">Blood Donors</span>
+    </div>
 
-                    <li>
-                        <a href="#">Registered Donors</a>
-                    </li>
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" id="menu-toggle"
+            aria-label="Open navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-                    <li>
-                        <a href="#">Available Donors</a>
-                    </li>
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-links">
 
-                </ul>
-            </li>
-            <li><a href="../html/donation-camps.html">Donation Camps</a></li>
-            <li><a href="#" data-open-emergency>Emergency</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <li>
+            <a href="home-page.html" class="active">Home</a>
+        </li>
 
-        <div class="nav-icons">
-            <a href="#" class="icon-btn"><i class="fa-solid fa-bell"></i></a>
-            
-            <div class="profile-dropdown">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Donor <i class="fa-solid fa-chevron-down"></i>
+            </a>
 
-                <button type="button" class="icon-btn profile-toggle" id="profileToggle" aria-label="Profile menu" aria-expanded="false">
-                    <i class="fa-solid fa-circle-user"></i>
-                </button>
+            <ul class="dropdown-menu">
+                <li><a href="donar.html">Donor Registration</a></li>
+                <li><a href="#">Registered Donors</a></li>
+                <li><a href="#">Available Donors</a></li>
+            </ul>
+        </li>
 
-                <ul class="profile-menu" id="profileMenu">
+        <li>
+            <a href="donation-camps.html">Donation Camps</a>
+        </li>
 
-                    <li>
-                        <a href="#" id="myProfileLink"><i class="fa-solid fa-user"></i>My Profile</a>
-                    </li>
+        <li>
+            <a href="#" data-open-emergency>Emergency</a>
+        </li>
 
-                    <li>
-                        <a href="#" id="logoutLink"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
-                    </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
 
-                 </ul>
+    </ul>
+
+    <!-- Navbar Icons -->
+    <div class="nav-icons">
+
+        <!-- Notification Dropdown -->
+        <div class="notification-container">
+
+            <button type="button" class="icon-btn"
+                    id="notificationButton"
+                    aria-label="Notifications"
+                    aria-expanded="false">
+                <i class="fa-solid fa-bell"></i>
+                <span class="notification-count">2</span>
+            </button>
+
+            <div class="notification-box" id="notificationBox">
+
+                <h3>Notifications</h3>
+
+                <a href="chat.html" class="notification-item">
+                    <i class="fa-solid fa-comment"></i>
+                    <div>
+                        <strong>New Message</strong>
+                        <p>You received a new message.</p>
+                    </div>
+                </a>
+
+                <a href="chat.html" class="notification-item">
+                    <i class="fa-solid fa-comment"></i>
+                    <div>
+                        <strong>New Message</strong>
+                        <p>You have an unread message.</p>
+                    </div>
+                </a>
 
             </div>
-
         </div>
 
-    </nav>
-    
+        <!-- Profile Dropdown -->
+        <div class="profile-dropdown">
+
+            <button type="button" class="icon-btn profile-toggle"
+                    id="profileToggle"
+                    aria-label="Profile menu"
+                    aria-expanded="false">
+                <i class="fa-solid fa-circle-user"></i>
+            </button>
+
+            <ul class="profile-menu" id="profileMenu">
+
+                <li>
+                    <a href="#" id="myProfileLink">
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" id="logoutLink">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+
+
 </body>
 </html>

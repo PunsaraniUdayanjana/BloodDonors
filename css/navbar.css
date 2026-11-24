@@ -1,4 +1,5 @@
 
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +9,11 @@
 
 body {
     background-color: #f4f4f4;
-    padding: 0px;
+    padding: 0;
+    padding-top: 15px;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,10 +24,12 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border: 1px solid #e0e0e0;
     max-width: 1500px;
+    height: 70px;
     margin: 0 auto;
     gap: 25px;
 }
 
+/* Logo */
 .logo-container {
     display: flex;
     align-items: center;
@@ -33,18 +38,19 @@ body {
 }
 
 .logo-img {
-   width: 35px;
-   height: 35px;
-   object-fit: contain;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
 }
 
 .brand-name {
-    color:#8b181b ;
+    color: #8b181b;
     font-weight: 700;
     font-size: 20px;
-    font-family: 'Georgia', serif
+    font-family: 'Georgia', serif;
 }
 
+/* Navigation Links */
 .nav-links {
     display: flex;
     align-items: center;
@@ -71,6 +77,7 @@ body {
     color: #ce1d23;
 }
 
+/* Navbar Icons */
 .nav-icons {
     display: flex;
     align-items: center;
@@ -89,6 +96,7 @@ body {
     color: #ce1d23;
 }
 
+/* Mobile Menu Button */
 .menu-toggle {
     display: none;
     background: none;
@@ -98,18 +106,19 @@ body {
     cursor: pointer;
 }
 
+/* Mobile Navigation */
 @media (max-width: 758px) {
-    .navbar{
+    .navbar {
         flex-wrap: wrap;
         gap: 15px;
         border-radius: 15px;
         padding: 15px;
+        height: auto;
     }
 
     .menu-toggle {
         display: block;
         margin-left: auto;
-        border: 2;
     }
 
     .nav-links {
@@ -125,6 +134,7 @@ body {
     }
 }
 
+/* Donor Dropdown */
 .dropdown {
     position: relative;
 }
@@ -135,13 +145,13 @@ body {
     top: calc(100% + 12px);
     left: 0;
     min-width: 190px;
-    background-color: #fff;
+    background-color: #ffffff;
     list-style: none;
     padding: 8px 0;
     margin: 0;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    border: 1px solid #eee;
+    border: 1px solid #eeeeee;
     z-index: 9999;
 }
 
@@ -163,7 +173,7 @@ body {
     display: block;
     width: 100%;
     padding: 12px 18px;
-    color: #333;
+    color: #333333;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -175,9 +185,7 @@ body {
     color: #025f2c;
 }
 
-
 /* Profile Dropdown */
-
 .profile-dropdown {
     position: relative;
 }
@@ -201,7 +209,7 @@ body {
     padding: 8px 0;
     margin: 0;
     border-radius: 10px;
-    border: 1px solid #eee;
+    border: 1px solid #eeeeee;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     z-index: 9999;
 }
@@ -219,7 +227,7 @@ body {
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    color: #333;
+    color: #333333;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -235,6 +243,90 @@ body {
     width: 16px;
 }
 
+/* Notification Container */
+.notification-container {
+    position: relative;
+}
 
+/* Notification Button */
+#notificationButton {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
 
+/* Notification Count */
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Notification Dropdown */
+.notification-box {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.notification-box.show {
+    display: block;
+}
+
+.notification-box h3 {
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+    color: #333333;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    text-decoration: none;
+    color: #333333;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.notification-item:hover {
+    background-color: #f5f5f5;
+}
+
+.notification-item > i {
+    color: #b71920;
+    font-size: 20px;
+}
+
+.notification-item p {
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+
+/* Mobile Notification */
+@media screen and (max-width: 600px) {
+    .notification-box {
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: min(300px, calc(100vw - 20px));
+    }
+}
