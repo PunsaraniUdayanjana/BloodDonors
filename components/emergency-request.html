@@ -1,0 +1,117 @@
+
+    
+    <div class="emergency-overlay" id="emergencyOverlay">
+        <div class="emergency-popup">
+
+            <button type="button" class="close-popup" id="closeEmergency">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="popup-heading">
+                <i class="fa-solid fa-droplet"></i>
+                <h2>Emergency Requests</h2>
+                <p>Request blood and help save a life.</p>
+            </div>
+
+            <form id="emergencyForm">
+                <div class="form-grid">
+
+                    <div class="from-field">
+                        <label for="requesterName">Name</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="requesterName" name="name" placeholder="Enter your name" required>
+                        </div>    
+                    </div>
+
+                    <div class="from-field">
+                        <label for="requesterAge">Age</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="number" id="requesterAge" name="age" placeholder="Enter your age" min="1" max="120" required>
+                        </div>    
+                    </div>
+
+                    <div class="from-field">
+                        <label for="requestBloodGroup">Blood Group</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-droplet"></i>
+                            <select id="requestBloodGroup" name="bloodGroup" required>
+                                <option value="" disabled selected>Select Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="from-field">
+                        <label for="requestLocation">Location</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <select id="requestLocation" name="location" required>
+                                <option value="" disabled selected>Location</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Gampaha">Gampaha</option>
+                                <option value="Kalutara">Kalutara</option>
+                                <option value="Kandy">Kandy</option>
+                                <option value="Matale">Matale</option>
+                                <option value="Nuwara Eliya">Nuwara Eliya</option>
+                                <option value="Galle">Galle</option>
+                                <option value="Matara">Matara</option>
+                                <option value="Hambantota">Hambantota</option>
+                                <option value="Kurunegala">Kurunegala</option>
+                                <option value="Puttalam">Puttalam</option>
+                                <option value="Ratnapura">Ratnapura</option>
+                                <option value="Kegalle">Kegalle</option>
+                                <option value="Batticaloa">Batticaloa</option>
+                                <option value="Ampara">Ampara</option>
+                                <option value="Trincomalee">Trincomalee</option>
+                                <option value="Anuradhapura">Anuradhapura</option>
+                                <option value="Polonnaruwa">Polonnaruwa</option>
+                                <option value="Badulla">Badulla</option>
+                                <option value="Monaragala">Monaragala</option>
+                                <option value="Jaffna">Jaffna</option>
+                                <option value="Kilinochchi">Kilinochchi</option>
+                                <option value="Mannar">Mannar</option>
+                                <option value="Mullaitivu">Mullaitivu</option>
+                                <option value="Vavuniya">Vavuniya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="from-field">
+                        <label for="hospitalName">Hospital</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-hospital"></i>
+                            <input type="text" id="hospitalName" placeholder="Enter hospital name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="from-field">
+                        <label for="contactNumber">Contact Number</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="contactNumber" name="hoapital" placeholder="Enter contact number" required>
+                        </div>
+                    </div>
+
+                    <div class="from-field full-width">
+                        <label for="additionalDetails">Additional Details</label>
+                            <textarea id="additionalDetails" rows="3" name="additionaldetails" placeholder="Enter additional information..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-request">Submit Emergency Request</button>
+
+
+            </form>
+
+        </div>
+
+    </div>

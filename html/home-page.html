@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/home-page.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/music-player.css">
+    <link rel="stylesheet" href="../css/emergency-request.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
@@ -19,6 +21,8 @@
 <body>
 
     <div id="navbar"></div>
+    <div id="emergency-popup-container"></div>
+    <div id="music-player"></div>
 
     <section class="hero-section">
         <div class="hero-container">
@@ -32,7 +36,7 @@
 
                 <div class="hero-buttons">
                     <a href="#" class="btn btn-red" onclick="window.location.href='find-donor.html'">Find a Donor</a>
-                    <a href="#" class="btn btn-teal">Blood Donor</a>
+                    <a href="#" class="btn btn-teal" onclick="window.location.href='donar.html'">Blood Donor</a>
                 </div>
             </div>
 
@@ -173,9 +177,13 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <script src="../js/home-page.js"></script>
     <script src="../js/footer.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/emergency-request.js"></script>
+    
 </body>
 </html>

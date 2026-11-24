@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Camps</title>
+
+    <link rel="stylesheet" href="../css/donation-camps.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/music-player.css">
+    <link rel="stylesheet" href="../css/emergency-request.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+    <div id="emergency-popup-container"></div>
+    <div id="music-player"></div>
+    
+    <main class="donation-camps-container">
+
+        <section class="camps-form-section">
+
+            <div class="camps-section-heading">
+                <h1>Organize a Donation Camps</h1>
+                <p>Share your blood donation campaign with everyone</p>
+            </div>
+
+            <form id="donationCampsForm" enctype="multipart/form-data">
+
+                <div class="camp-form-content">
+
+                    <div class="poster-update-section">
+
+                        <label for="campPoster" class="poster-update-box">
+
+                            <div id="posterPlaceholder">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <h3>Update Poster</h3>
+                                <p>Choose a camp poster image</p>
+                            </div>
+
+                            <img src="" alt="Camp Poster Preview" id="posterPreview" style="display: none;">
+
+                        </label>
+
+                        <input type="file" id="campPoster" name="campPoster" accept="image/*" hidden>
+                    </div>
+
+                    <div class="camp-details-form">
+
+                        <div class="camp-input-group">
+                            <i class="fa-solid fa-flag"></i>
+                            <input type="text" id="campName" name="campName" placeholder="Camp Name" required>
+                        </div>
+
+                        <div class="camp-input-group">
+                            <i class="fa-solid fa-users"></i>
+                            <input type="text" id="organizerName" name="organizerName" placeholder="Organizer Name" required>
+                        </div>
+
+                        <div class="camp-input-group">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Contact Number" required>
+                        </div>
+
+                        <div class="camp-input-group">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="date" id="campDate" name="campDate" required>
+                        </div>
+
+                        <div class="camp-input-group">
+                            <i class="fa-solid fa-clock"></i>
+                            <input type="time" id="campTime" name="campTime" required>
+                        </div>
+
+                        <div class="camp-input-group">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input type="text" name="campLocation" id="campLocation" placeholder="Location (Place, Town, District)" required>
+                        </div>
+
+                        <div class="camp-input-group">
+                            <i class="fa-solid fa-align-left"></i>
+                            <textarea  name="campDescription" id="campDescription" placeholder="Description" rows="3" required></textarea>
+                        </div>
+
+                        <div class="camp-submit-section">
+                            <button type="submit" id="publishCampBtn"><i class="fa-solid fa-paper-plane"></i>Post</button>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="published-camp-section">
+
+            <div class="published-camp-heading">
+
+                <h2>Donation Camp Posts</h2>
+                <p>Explore upcoming blood donation campaigns</p>
+            </div>
+
+            <div class="camp-posts-container" id="campPostsContainer"></div>
+        
+        </section>
+
+    </main>
+
+
+    <div class="poster-modal" id="posterModal">
+
+        <div class="poster-modal-content">
+
+            <button type="button" class="close-poster-modal" id="closePosterModal" aria-label="Close poster preview">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <img src="" alt="Donation Camp Poster" id="modalPosterImage">
+
+        </div>
+
+    </div>
+
+    <div class="camp-notification" id="campNotification" role="status" aria-live="polite"></div>
+
+
+    <div id="footer"></div>
+
+    <script src="../js/donation-camps.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/emergency-request.js"></script>
+
+
+
+
+
+</body>
+</html>
